@@ -1,3 +1,12 @@
+## Models
+
+You can download the model weight:
+
+- [bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased)
+- [roberta-base](https://huggingface.co/FacebookAI/roberta-base)
+
+
+
 ## Steps
 
 Run the script directly.

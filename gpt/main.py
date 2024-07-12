@@ -16,9 +16,8 @@ class InferArguments:
 
 
 def inference(options):
-    api_key = "sk-m3frVjNHs0rSvUNt0aAa5e7220F24a42A6844a9f9336BdDe"
-    base_url = "https://api.zyai.online/v1"
-    client = OpenAI(api_key=api_key, base_url=base_url)
+    api_key = "xxx"  # filling your api_key
+    client = OpenAI(api_key=api_key)
     model = options.model_name
     print(model)
 

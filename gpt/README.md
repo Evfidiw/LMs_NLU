@@ -6,7 +6,7 @@
     python gpt/dataset/trec6/data_process.py
     ```
 
-2. Generate the output.
+2. Generate the output. Before executing the program, fill in your ``api_key`` and ``model_name``。
 
     ```
     sh gpt_zs_trec6.sh

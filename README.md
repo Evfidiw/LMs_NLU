@@ -39,7 +39,7 @@ Metric: accuracy (%)
 | CLIP (clip-vit-base-patch32)  | 39.60 | 56.51 |
 | CLIP (clip-vit-large-patch14) | 47.20 | 52.88 |
 | GPT3.5 (gpt-3.5-turbo)        | 73.00 | 91.38 |
-| GPT4 (gpt-4)                  | 84.20 |       |
+| GPT4 (gpt-4)                  | 84.20 | 93.79 |
 
 
 

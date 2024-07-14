@@ -13,7 +13,7 @@ This repository is also the template on the NLU task.
 Install the libraries needed to work:
 
 ``````
-`pip install -r requirements.txt
+pip install -r requirements.txt
 ``````
 
 
@@ -22,7 +22,7 @@ Install the libraries needed to work:
 
 The following are the details on the various language models.
 
-- [BERT-based](https://github.com/Evfidiw/LMs_for_NLU/tree/main/bert)
+- [bert-based](https://github.com/Evfidiw/LMs_for_NLU/tree/main/bert)
 - [CLIP](https://github.com/Evfidiw/LMs_for_NLU/tree/main/clip)
 - [GPT](https://github.com/Evfidiw/LMs_for_NLU/tree/main/gpt)
 
@@ -38,7 +38,7 @@ Metric: accuracy (%)
 | ----------------------------- | ----- | ----- |
 | CLIP (clip-vit-base-patch32)  | 39.60 | 56.51 |
 | CLIP (clip-vit-large-patch14) | 47.20 | 52.88 |
-| GPT3.5 (gpt-3.5-turbo)        | 73.00 |       |
+| GPT3.5 (gpt-3.5-turbo)        | 73.00 | 91.38 |
 | GPT4 (gpt-4)                  | 84.20 |       |
 
 
@@ -57,7 +57,7 @@ Metric: accuracy (%)
 
 ## Analysis
 
-- LLMs demonstrate superior performance in zero-shot scenarios, where they can effectively handle tasks without the need for task-specific training. This makes LLMs particularly advantageous for applications requiring flexibility and adaptability to a wide range of tasks with minimal preparation.
+- LLMs demonstrate superior performance in zero-shot scenarios, where they can effectively handle tasks without the need for task-specific training. 
 - PLMs, especially those that are encoder-only, such as BERT, are sufficient through finetuning for many NLU tasks. These models excel in understanding and processing natural language, making them suitable for tasks like text classification, sentiment analysis, and named entity recognition.
 - The effectiveness of different prompts varies significantly, impacting the performance of language models. The design of prompts can influence performance significantly.
 

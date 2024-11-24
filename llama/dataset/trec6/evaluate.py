@@ -5,7 +5,8 @@ import pdb
 
 
 def extract_intent(json_response):
-    classes = ['ABBR', 'ENTY', 'DESC', 'HUM', 'LOC', 'NUM']
+    classes = ['Abbreviation', 'Entity', 'Description and abstract concept',
+               'Human being', 'Location', 'Numeric value']
     pattern_cmp = re.compile(r"\b(" + "|".join(re.escape(word) for word in classes) + r")\b")
     match = pattern_cmp.search(json_response)
     # match = re.search(r"\{'label':\s*'([^']+)'\}", json_response)

@@ -5,14 +5,13 @@ import pdb
 
 
 def extract_intent(json_response):
-    def extract_intent(json_response):
-        classes = ['positive', 'negative']
-        pattern_cmp = re.compile(r"\b(" + "|".join(re.escape(word) for word in classes) + r")\b")
-        match = pattern_cmp.search(json_response)
-        # match = re.search(r"\{'label':\s*'([^']+)'\}", json_response)
-        if match:
-            return match.group(1)
-        return 'None'
+    classes = ['positive', 'negative']
+    pattern_cmp = re.compile(r"\b(" + "|".join(re.escape(word) for word in classes) + r")\b")
+    match = pattern_cmp.search(json_response)
+    # match = re.search(r"\{'label':\s*'([^']+)'\}", json_response)
+    if match:
+        return match.group(1)
+    return 'None'
 
 
 def evaluate_intent_classification(reference_file, output_file):

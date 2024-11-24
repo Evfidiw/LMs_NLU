@@ -22,8 +22,16 @@ if __name__ == "__main__":
     label_path = os.path.join(args.output_dir, args.label_json)
     os.makedirs(args.output_dir, exist_ok=True)
 
-    if "trec6" in args.data_dir:
-        classes = ['ABBR', 'ENTY', 'DESC', 'HUM', 'LOC', 'NUM']
+    classes = ['Abbreviation', 'Entity', 'Description and abstract concept',
+               'Human being', 'Location', 'Numeric value']
+    class_mapping = {
+        'ABBR': 'Abbreviation',
+        'ENTY': 'Entity',
+        'DESC': 'Description and abstract concept',
+        'HUM': 'Human being',
+        'LOC': 'Location',
+        'NUM': 'Numeric value'
+    }
 
     with open(args.input_path, 'r', encoding='utf-8') as input_file1, open(text_path, 'w', encoding='utf-8') as output_file1:
         for line in input_file1:
@@ -34,7 +42,7 @@ if __name__ == "__main__":
             data_input = ' '.join(rest_of_the_string)
 
             json_line = json.dumps({
-                "instruction": "Identify the label of this sentence. The possible labels are: " + ", ".join(classes) +
+                "instruction": "Identify the class of this sentence. The possible classes are: " + str(classes) +
                                ". Don't respond anything else, just respond in the {'<identified_class>'} format.",
                 "input": data_input,
             })
@@ -47,7 +55,8 @@ if __name__ == "__main__":
             second_part = line.split(':')[1]
             rest_of_the_string = second_part.split()[1:]
             data_input = ' '.join(rest_of_the_string)
-            json_line = json.dumps({"output": str(class_name)}, ensure_ascii=False)
+            full_class_name = class_mapping[class_name]
+            json_line = json.dumps({"output": str(full_class_name)}, ensure_ascii=False)
             output_file2.write(json_line + '\n')
 
     print("done!")

@@ -25,6 +25,7 @@ The following are the details on the various language models.
 - [bert-based](https://github.com/Evfidiw/LMs_for_NLU/tree/main/bert)
 - [CLIP](https://github.com/Evfidiw/LMs_for_NLU/tree/main/clip)
 - [GPT](https://github.com/Evfidiw/LMs_for_NLU/tree/main/gpt)
+- [LLaMA](https://github.com/Evfidiw/LMs_for_NLU/tree/main/llama)
 
 
 
@@ -40,6 +41,7 @@ Metric: accuracy (%)
 | CLIP (clip-vit-large-patch14) | 47.20 | 52.88 |
 | GPT3.5 (gpt-3.5-turbo)        | 73.00 | 91.38 |
 | GPT4 (gpt-4)                  | 84.20 | 93.79 |
+| LLaMA3 (Llama-3-8B)           | 39.60 | 60.02 |
 
 
 
